@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         //features page içerisindeki @glue içindeki stepDefinitions ile birleştir sonra tagı @US001 olanı çalıştır dedik
         features = "src/test/resources/features/" ,
         glue = "stepDefinitions" ,
-        tags = "@samsung" ,
+        tags = "@US003" ,
         dryRun = false // bu true olursa eksik stepDefinitions varmı onu kontrol eder.
 
 )
