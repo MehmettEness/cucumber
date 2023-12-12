@@ -26,6 +26,7 @@ public class amazonStepDefinition {
 
     @When("sayfayı kapatır")
     public void sayfayı_kapatır() {
+        ReusableMethods.bekle(2);
         Driver.closeDriver();
     }
 
@@ -37,5 +38,9 @@ public class amazonStepDefinition {
     }
 
 
-
+    @When("arama kutusunda nokia aratır")
+    public void aramaKutusundaNokiaAratır() {
+        amazonPage.searchBox.sendKeys("nokia");
+        amazonPage.searchBox.submit();
+    }
 }

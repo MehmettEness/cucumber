@@ -8,13 +8,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class) //run butonu getirir.
 @CucumberOptions(
         //features page içerisindeki @glue içindeki stepDefinitions ile birleştir sonra tagı @US001 olanı çalıştır dedik
-        features = "src/test/resources/features/firstFeatureFile.feature" ,
+        features = "src/test/resources/features/" ,
         glue = "stepDefinitions" ,
-        tags = "@US001" ,
+        tags = "@samsung" ,
         dryRun = false // bu true olursa eksik stepDefinitions varmı onu kontrol eder.
 
 )
-public class Runner {
+public class Runner3 {
 }
 
 /*
