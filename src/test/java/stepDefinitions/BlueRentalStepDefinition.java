@@ -2,7 +2,9 @@ package stepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.BlueRentalPage;
 import utilities.ConfigReader;
@@ -33,4 +35,14 @@ public class BlueRentalStepDefinition {
 
     }
 
+    @And("kullanici {string} ve {string} bilgilerini girer")
+    public void kullaniciVeBilgileriniGirer(String email , String password) {
+        blueRentalPage.email.sendKeys(email);
+        blueRentalPage.password.sendKeys(password , Keys.ENTER);
+    }
+
+    @Then("login olduğunu doğrular")
+    public void loginOlduğunuDoğrular() {
+        Assert.assertFalse(blueRentalPage.loginVerify.getText().equals("login"));
+    }
 }
