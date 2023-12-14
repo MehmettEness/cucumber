@@ -8,6 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class) //run butonu getirir.
 @CucumberOptions(
         //features page içerisindeki @glue içindeki stepDefinitions ile birleştir sonra tagı @US001 olanı çalıştır dedik
+        plugin = {"html:target/default-cucumber-reports.html" ,
+                    "json:target/json-reports/cucumber.json" ,
+                    "junit:target/xml-report/cucumber.xml"} ,
         features = "src/test/resources/features/firstFeatureFile.feature" ,
         glue = "stepDefinitions" ,
         tags = "@US001" ,

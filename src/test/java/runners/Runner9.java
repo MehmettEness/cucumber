@@ -13,10 +13,10 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags = "@US008",
+        tags = "@US009",
         dryRun = false
 )
-public class Runner8 {
+public class Runner9 {
 }
 /*
     Runner class bodysi icinde birsey yazilmaz
